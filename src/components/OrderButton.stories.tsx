@@ -9,17 +9,31 @@ const meta = {
     tags: ['autodocs'],
     //👇 Our exports that end in "Data" are not stories.
     excludeStories: /.*Data$/,
+
 } satisfies Meta<typeof OrderButton>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-    args: {
+    args:{
         groupName: 'Group Name',
         color: 'primary',
         variant: 'contained',
-    },
+        OrderGroup: {
+            name: "Group Name",
+            options: [
+                {
+                    name: "Option A",
+                    orders: [
+                        {
+                            Description: "Order Description"
+                        },
+                    ]
+                },
+            ]
+        }
+    }
 };
 
 /*

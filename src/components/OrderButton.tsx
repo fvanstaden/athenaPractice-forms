@@ -41,6 +41,7 @@ export default function OrderButton(props: OrderButtonProps) {
         <Button
             variant={props.variant}
             color={props.color}
+            sentanceCase
         >
             {props.groupName}
 

@@ -1,14 +1,10 @@
 
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { fn } from '@storybook/test';
 import Task from "./Task.tsx";
 
 
-export const ActionsData = {
-    onArchiveTask: fn(),
-    onPinTask: fn(),
-};
+
 
 const meta = {
     component: Task,
@@ -16,14 +12,13 @@ const meta = {
     tags: ['autodocs'],
     //👇 Our exports that end in "Data" are not stories.
     excludeStories: /.*Data$/,
-    args: {
-        ...ActionsData,
-    },
+
 } satisfies Meta<typeof Task>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
 
+
+/*
 export const Default: Story = {
     args: {
         task: {
@@ -50,4 +45,4 @@ export const Archived: Story = {
             state: 'TASK_ARCHIVED',
         },
     },
-};
+};*/

@@ -71,7 +71,10 @@ function App() {
 
     return (
         <>
-            <Page/>
+            <ThemeProvider theme={theme}>
+                <CssBaseline/>
+                <Page/>
+            </ThemeProvider>
         </>
     );
 }
